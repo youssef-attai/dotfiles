@@ -10,3 +10,6 @@
 [submodule ".zsh/plugins/zsh-completions"]
     path = .zsh/plugins/zsh-completions
     url = https://github.com/zsh-users/zsh-completions
+[submodule ".zsh/themes/spaceship-prompt"]
+    path = .zsh/themes/spaceship-prompt
+    url = https://github.com/spaceship-prompt/spaceship-prompt
