@@ -1,0 +1,6 @@
+# Homepage that vimb opens if started without a URI.
+set home-page=https://google.com
+
+set dark-mode=on
+
+
