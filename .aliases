@@ -1,3 +1,9 @@
+### NeoVim
+alias v='nvim'
+
+### clear
+alias c='clear'
+
 ### ls
 alias l='ls'
 alias ls='ls --color=auto'
