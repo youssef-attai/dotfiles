@@ -235,6 +235,7 @@ bindsym $mod+b exec --no-startup-id vieb
 ## Scratchpads
 exec --no-startup-id alacritty --class Ranger,scratchpad -e ranger
 exec --no-startup-id alacritty --class Alacritty,scratchpad
+exec --no-startup-id alacritty --class Htop,scratchpad -e htop
 
 # Ranger scratchpad
 for_window [class="Ranger" instance="scratchpad"] move to scratchpad
@@ -243,4 +244,8 @@ bindsym $mod+g [class="Ranger" instance="scratchpad"] scratchpad show, resize se
 # Terminal scratchpad
 for_window [class="Alacritty" instance="scratchpad"] move to scratchpad
 bindsym $mod+Return [class="Alacritty" instance="scratchpad"] scratchpad show, resize set 1000 600; move position center;
+
+# Htop scratchpad
+for_window [class="Htop" instance="scratchpad"] move to scratchpad
+bindsym $mod+t [class="Htop" instance="scratchpad"] scratchpad show, resize set 1000 600; move position center;
 
