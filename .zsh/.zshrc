@@ -116,6 +116,7 @@ fpath=($ZSH/plugins/zsh-completions/src $fpath)
 
 ### --- Spaceship Config ------------------------------------
 SPACESHIP_PROMPT_ORDER=(
+  venv
   user          # Username section
   dir           # Current directory section
   host          # Hostname section
