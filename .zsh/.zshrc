@@ -12,6 +12,9 @@ export EDITOR='nvim'
 export VISUAL='nvim'
 export PAGER='less'
 
+### ---- Clipmenu config ------------------------------------
+export CM_LAUNCHER=rofi
+
 ### ZSH HOME
 export ZSH=$HOME/.zsh
 
