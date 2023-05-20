@@ -1,1 +1,2 @@
+clipmenud &
 exec i3
