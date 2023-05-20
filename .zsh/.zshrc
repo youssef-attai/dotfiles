@@ -108,6 +108,10 @@ function ranger-cd {
 source $ZSH/themes/spaceship-prompt/spaceship.zsh-theme
 source $ZSH/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 source $ZSH/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+source $ZSH/plugins/zsh-autopair/autopair.zsh
+autopair-init
+
 fpath=($ZSH/plugins/zsh-completions/src $fpath)
 
 ### --- Spaceship Config ------------------------------------
