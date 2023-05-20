@@ -13,3 +13,6 @@
 [submodule ".zsh/themes/spaceship-prompt"]
     path = .zsh/themes/spaceship-prompt
     url = https://github.com/spaceship-prompt/spaceship-prompt
+[submodule "zsh-autopair"]
+	path = .zsh/plugins/zsh-autopair
+	url = https://github.com/hlissner/zsh-autopair
