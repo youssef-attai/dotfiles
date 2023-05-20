@@ -7,6 +7,11 @@ zmodload zsh/complist
 ### ---- PATH config ----------------------------------------
 export PATH=$HOME/bin:$HOME/bin/blocks:$PATH
 
+### ---- General config -------------------------------------
+export EDITOR='nvim'
+export VISUAL='nvim'
+export PAGER='less'
+
 ### ZSH HOME
 export ZSH=$HOME/.zsh
 
