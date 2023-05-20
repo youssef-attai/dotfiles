@@ -254,3 +254,5 @@ bindsym $mod+t [class="Htop" instance="scratchpad"] scratchpad show, resize set 
 for_window [class="NMTUI" instance="scratchpad"] move to scratchpad
 bindsym $mod+n [class="NMTUI" instance="scratchpad"] scratchpad show, resize set 1000 600; move position center;
 
+# Clipmenu
+bindsym $mod+c exec --no-startup-id clipmenu -p 'Clipboard' -i
