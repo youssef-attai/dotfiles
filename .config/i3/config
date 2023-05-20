@@ -232,9 +232,13 @@ bindsym $mod+x exec --no-startup-id i3lock-fancy
 # Vieb
 bindsym $mod+b exec --no-startup-id vieb
 
-# File manager
-bindsym $mod+g exec --no-startup-id alacritty --class Ranger -e ranger
-
 # NeoVim
 bindsym $mod+n exec --no-startup-id alacritty --class NeoVim -e nvim
+
+## Scratchpads
+exec --no-startup-id alacritty --class Ranger,scratchpad -e ranger
+
+# Ranger scratchpad
+for_window [class="Ranger" instance="scratchpad"] move to scratchpad
+bindsym $mod+g [class="Ranger" instance="scratchpad"] scratchpad show, resize set 1000 600; move position center;
 
