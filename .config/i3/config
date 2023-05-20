@@ -232,9 +232,6 @@ bindsym $mod+x exec --no-startup-id i3lock-fancy
 # Vieb
 bindsym $mod+b exec --no-startup-id vieb
 
-# NeoVim
-bindsym $mod+n exec --no-startup-id alacritty --class NeoVim -e nvim
-
 ## Scratchpads
 exec --no-startup-id alacritty --class Ranger,scratchpad -e ranger
 
