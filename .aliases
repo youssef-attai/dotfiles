@@ -4,6 +4,9 @@ alias v='nvim'
 ### clear
 alias c='clear'
 
+### ranger change directory on exit
+alias nav='ranger-cd'
+
 ### ls
 alias l='ls'
 alias ls='ls --color=auto'
