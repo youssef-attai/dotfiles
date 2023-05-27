@@ -5,7 +5,7 @@ zstyle ':completion:*' menu yes select
 zmodload zsh/complist
 
 ### ---- PATH config ----------------------------------------
-export PATH=$HOME/bin:$HOME/bin/blocks:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:$HOME/bin/blocks:$HOME/flutter/flutter/bin:$PATH
 
 ### ---- General config -------------------------------------
 export EDITOR='nvim'
