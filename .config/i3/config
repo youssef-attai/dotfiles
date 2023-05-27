@@ -212,6 +212,7 @@ client.background       $background
 # Assign programs to workspaces
 assign [class="Vimb"] $ws3
 assign [class="Vieb"] $ws3
+assign [class="Google-chrome"] $ws3
 assign [class="Spotify"] $ws4
 assign [class="discord"] $ws5
 assign [class="VirtualBox Manager"] $ws7
@@ -230,7 +231,7 @@ bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection c
 bindsym $mod+x exec --no-startup-id i3lock-fancy
 
 # Vieb
-bindsym $mod+b exec --no-startup-id vieb
+# bindsym $mod+b exec --no-startup-id vieb
 
 ## Scratchpads
 exec --no-startup-id alacritty --class Ranger,scratchpad -e ranger
