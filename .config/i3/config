@@ -249,3 +249,6 @@ bindsym $mod+t [class="Htop" instance="scratchpad"] scratchpad show, resize set 
 
 # Clipmenu
 bindsym $mod+c exec --no-startup-id clipmenu -p 'Clipboard' -i
+
+# Focus on window activation
+focus_on_window_activation focus
