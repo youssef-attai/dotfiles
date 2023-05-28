@@ -178,7 +178,7 @@ bindsym $mod+r mode "resize"
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Gaps
-gaps inner 10
+gaps inner 8
 
 # Remove borders
 for_window [class="^.*"] border pixel 3
