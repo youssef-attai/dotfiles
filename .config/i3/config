@@ -112,8 +112,8 @@ set $ws2 2:Code
 set $ws3 3:Browser
 set $ws4 4:Spotify
 set $ws5 5:Discord
-set $ws6 6:Files
-set $ws7 7:VirtualBox
+set $ws6 6:VirtualBox
+set $ws7 7:Misc
 set $ws8 8:Misc
 set $ws9 9:Misc
 set $ws10 10:Misc
