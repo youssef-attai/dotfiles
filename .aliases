@@ -20,6 +20,8 @@ alias grep='grep --color=auto'
 ### git
 alias gi='git init'
 
+alias gc='git clone'
+
 alias gs='git status'
 alias gsv='git status -v'
 
@@ -28,9 +30,9 @@ alias gaa='git add --all'
 alias gap='git add --patch'
 alias gae='git add --edit'
 
-alias gc='git commit'
+alias gcm='git commit'
 alias gcv='git commit -v'
-alias gcm='git commit -m'
+alias gcmm='git commit -m'
 alias gca='git commit --amend'
 
 alias gco='git checkout'
@@ -63,3 +65,6 @@ alias grsts='git restore --staged'
 alias grst='git restore'
 
 alias gg='git log --all --decorate --oneline --graph'
+
+alias gm='git merge'
+
