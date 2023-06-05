@@ -263,6 +263,9 @@ bindsym $mod+t [class="Htop" instance="scratchpad"] scratchpad show, resize set 
 # Clipmenu
 bindsym $mod+c exec --no-startup-id clipmenu -p 'Clipboard' -i
 
+# Rofi Emoji
+bindsym $mod+Shift+e exec --no-startup-id rofi -modi emoji -show emoji
+
 # Rofi power menu
 bindsym $mod+p exec --no-startup-id rofi -show power-menu -modi power-menu:rofi-power-menu
 
