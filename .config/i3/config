@@ -237,7 +237,7 @@ exec --no-startup-id alacritty --class Htop,scratchpad -e htop
 
 # Ranger scratchpad
 for_window [class="Ranger" instance="scratchpad"] move to scratchpad
-bindsym $mod+g [class="Ranger" instance="scratchpad"] scratchpad show, resize set 1000 600; move position center;
+bindsym $mod+m [class="Ranger" instance="scratchpad"] scratchpad show, resize set 1000 600; move position center;
 
 # Terminal scratchpad
 for_window [class="Alacritty" instance="scratchpad"] move to scratchpad
