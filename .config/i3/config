@@ -258,3 +258,7 @@ bindsym $mod+b exec --no-startup-id google-chrome-stable
 
 # Focus on window activation
 focus_on_window_activation focus
+
+# Focus follows mouse
+focus_follows_mouse no
+
