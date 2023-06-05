@@ -1,0 +1,85 @@
+#!/usr/bin/env bash
+
+# Get first argument
+if [ -z "$1" ]; then
+    echo "No argument supplied"
+    exit 1
+fi
+
+# If first argument is git, then open git config file
+if [ "$1" == "git" ]; then
+    nvim ~/.gitconfig
+    exit 0
+fi
+
+# If first argument is x, then open xinit config file
+if [ "$1" == "x" ]; then
+    nvim ~/.xinitrc
+    exit 0
+fi
+
+# If first argument is aliases, then open aliases config file
+if [ "$1" == "aliases" ]; then
+    nvim ~/.aliases
+    exit 0
+fi
+
+# If first argument is env, then open .env file
+if [ "$1" == "env" ]; then
+    nvim ~/.env
+    exit 0
+fi
+
+# If first argument is i3, then open i3 config file
+if [ "$1" == "i3" ]; then
+    nvim ~/.config/i3/config
+    exit 0
+fi
+
+# If first argument is nvim, then open nvim config file
+if [ "$1" == "nvim" ]; then
+    nvim ~/.config/nvim/
+    exit 0
+fi
+
+# If first argument is zsh, then open zsh config file
+if [ "$1" == "zsh" ]; then
+    nvim ~/.zsh/.zshrc
+    exit 0
+fi
+
+# If first argument is polybar, then open polybar config file
+if [ "$1" == "polybar" ]; then
+    nvim ~/.config/polybar/config.ini
+    exit 0
+fi
+
+# If first argument is rofi, then open rofi config file
+if [ "$1" == "rofi" ]; then
+    nvim ~/.config/rofi/config.rasi
+    exit 0
+fi
+
+# If first argument is dunst, then open dunst config file
+if [ "$1" == "dunst" ]; then
+    nvim ~/.config/dunst/dunstrc
+    exit 0
+fi
+
+# If first argument is picom, then open picom config file
+if [ "$1" == "picom" ]; then
+    nvim ~/.config/picom/picom.conf
+    exit 0
+fi
+
+# If first argument is alacritty, then open alacritty config file
+if [ "$1" == "alacritty" ]; then
+    nvim ~/.config/alacritty/alacritty.yml
+    exit 0
+fi
+
+# If first argument is ranger, then open ranger config file
+if [ "$1" == "ranger" ]; then
+    nvim ~/.config/ranger/rc.conf
+    exit 0
+fi
