@@ -252,5 +252,9 @@ bindsym $mod+c exec --no-startup-id clipmenu -p 'Clipboard' -i
 
 # Rofi power menu
 bindsym $mod+p exec --no-startup-id rofi -show power-menu -modi power-menu:rofi-power-menu
+
+# Chrome
+bindsym $mod+b exec --no-startup-id google-chrome-stable
+
 # Focus on window activation
 focus_on_window_activation focus
