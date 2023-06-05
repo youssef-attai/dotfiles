@@ -250,5 +250,7 @@ bindsym $mod+t [class="Htop" instance="scratchpad"] scratchpad show, resize set 
 # Clipmenu
 bindsym $mod+c exec --no-startup-id clipmenu -p 'Clipboard' -i
 
+# Rofi power menu
+bindsym $mod+p exec --no-startup-id rofi -show power-menu -modi power-menu:rofi-power-menu
 # Focus on window activation
 focus_on_window_activation focus
