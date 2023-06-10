@@ -296,3 +296,5 @@ focus_follows_mouse no
 # show/hide polybar with mod+`
 bindsym $mod+grave exec --no-startup-id polybar-msg cmd toggle
 
+# Set brightness to lowest
+exec --no-startup-id xbacklight -set 1
