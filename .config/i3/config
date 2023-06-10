@@ -86,7 +86,7 @@ bindsym $mod+Right split h
 bindsym $mod+Down split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+bindsym $mod+Shift+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
@@ -250,7 +250,7 @@ exec --no-startup-id alacritty --class Htop,scratchpad -e htop
 
 # Ranger scratchpad
 for_window [class="Ranger" instance="scratchpad"] move to scratchpad
-bindsym $mod+m [class="Ranger" instance="scratchpad"] scratchpad show, resize set 1000 600; move position center;
+bindsym $mod+f [class="Ranger" instance="scratchpad"] scratchpad show, resize set 1000 600; move position center;
 
 # Terminal scratchpad
 for_window [class="Alacritty" instance="scratchpad"] move to scratchpad
