@@ -232,8 +232,6 @@ bindsym Ctrl+Print exec --no-startup-id i3_screenshot full -c
 bindsym $mod+Ctrl+Print exec --no-startup-id i3_screenshot window -c
 bindsym Ctrl+Shift+Print exec --no-startup-id i3_screenshot select -c
 
-# Lock screen
-# bindsym $mod+x exec --no-startup-id i3lock-fancy
 # Media keys
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
@@ -243,8 +241,8 @@ bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
 bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 
-# Vieb
-# bindsym $mod+b exec --no-startup-id vieb
+# Lock screen
+bindsym $mod+Ctrl+Shift+l exec --no-startup-id i3lock-fancy
 
 ## Scratchpads
 exec --no-startup-id alacritty --class Ranger,scratchpad -e ranger
