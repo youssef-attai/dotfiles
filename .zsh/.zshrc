@@ -4,20 +4,12 @@ zstyle ':completion:*' completer _extensions _complete _approximate
 zstyle ':completion:*' menu yes select
 zmodload zsh/complist
 
-### ---- PATH config ----------------------------------------
-export PATH=$HOME/bin:$HOME/.local/bin:$HOME/bin/blocks:$HOME/flutter/flutter/bin:$PATH
-
-### ---- General config -------------------------------------
-export EDITOR='nvim'
-export VISUAL='nvim'
-export PAGER='less'
-
 ### ---- Clipmenu config ------------------------------------
 export CM_LAUNCHER=rofi
 
 ### ---- Chrome executable ----------------------------------
 export CHROME_EXECUTABLE=google-chrome-stable
-
+#
 ### ZSH HOME
 export ZSH=$HOME/.zsh
 
