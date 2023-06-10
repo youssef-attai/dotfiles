@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+clipmenu -p 'Clipboard' -i
+
