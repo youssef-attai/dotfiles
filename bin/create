@@ -1,0 +1,60 @@
+#!/usr/bin/env bash
+
+# This script creates projects of different types.
+
+# Usage: create <project-type> <project-name>
+# Example: create java my-java-project
+# Example: create node my-node-project
+# Example: create python my-python-project
+
+type=$1
+name=$2
+
+PROJECT_DIR=~/Projects
+
+if [ -z "$type" ]; then
+  echo "Project type is required."
+  exit 1
+fi
+
+if [ -z "$name" ]; then
+  echo "Project name is required."
+  exit 1
+fi
+
+CURRENT_DIR=$(pwd)
+
+
+if [ -d "$name" ]; then
+  echo "Project $name already exists."
+  exit 1
+fi
+
+case "$type" in
+  java)
+    cd $PROJECT_DIR
+    mvn archetype:generate -DgroupId=com.example -DartifactId=$name -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+    ;;
+  node)
+    mkdir $PROJECT_DIR/$name
+    cd $PROJECT_DIR/$name
+    npm init -y
+    ;;
+  python)
+    mkdir $PROJECT_DIR/$name
+    cd $PROJECT_DIR/$name
+    python -m venv .venv
+    ;;
+  script)
+    cd $HOME/bin
+    touch $name
+    echo "#!/usr/bin/env bash" >> $name
+    sudo chmod +x $name
+    ;;
+  *)
+    echo "Unknown project type: $type"
+    exit 1
+    ;;
+esac
+
+cd $CURRENT_DIR
