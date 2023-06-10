@@ -290,3 +290,5 @@ focus_on_window_activation focus
 # Focus follows mouse
 focus_follows_mouse no
 
+# Switch to last workspace
+# workspace_auto_back_and_forth yes
