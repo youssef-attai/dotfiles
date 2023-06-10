@@ -1,39 +1,65 @@
 /*Dracula theme based on the Purple official rofi theme*/
 
 * {
-    font: "DejaVu Sans Mono 12";
-    foreground: #f8f8f2;
-    background-color: #282a36;
-    /* active-background: #6272a4; */
-    active-background: #bd93f9;
-    urgent-background: #ff5555;
-    urgent-foreground: #282a36;
-    selected-background: @active-background;
-    selected-urgent-background: @urgent-background;
-    selected-active-background: @active-background;
-    separatorcolor: @active-background;
-    bordercolor: @active-background;
+    font: "DejaVuSansM Nerd Font Mono 12";
+
+    gray900: #18181B;
+    gray700: #3F3F46;
+    gray50:  #FAFAFA;
+
+    rose900: #881337;
+    rose800: #9F1239;
+    rose400: #FB7185;
+    rose200: #FECDD3;
+
+    red800: #991B1B;
+    red600: #DC2626;
+    red100: #FEE2E2;
+    red50:  #FEF2F2;
+
+    green500: #22C55E;
+
+    background: @gray900;
+    foreground: @gray50;
+
+    active-background: @gray700;
+    active-foreground: @gray50;
+
+    urgent-background: @red600;
+    urgent-foreground: @red50;
+
+    selected-background: @rose900;
+    selected-foreground: @gray50;
+
+    selected-urgent-background: @red800;
+    selected-urgent-foreground: @red50;
+
+    selected-active-background: @gray700;
+    selected-active-foreground: @gray50;
+
+    separatorcolor: @green500;
+    bordercolor: @green500;
 }
 
 configuration {
     show-icons:      true;
-    display-drun:    "";
+    display-drun:    "Launch";
     disable-history: false;
 }
 
 #window {
-    background-color: @background-color;
-    border:           3;
-    border-radius:    6;
+    background-color: @background;
+    border:           0;
+    border-radius:    0;
     border-color:     @bordercolor;
-    padding:          15;
+    padding:          0;
 }
 #mainbox {
     border:  0;
     padding: 0;
 }
 #message {
-    border:       0px;
+    border:       0;
     border-color: @separatorcolor;
     padding:      1px;
 }
@@ -44,16 +70,14 @@ configuration {
     fixed-height: 0;
     border:       0px;
     border-color: @bordercolor;
-    spacing:      2px ;
     scrollbar:    false;
-    padding:      2px 0px 0px ;
 }
 #element {
     border:  0;
-    padding: 3px ;
+    padding: 5px;
 }
 #element.normal.normal {
-    background-color: @background-color;
+    background-color: @background;
     text-color:       @foreground;
 }
 #element.normal.urgent {
@@ -62,31 +86,31 @@ configuration {
 }
 #element.normal.active {
     background-color: @active-background;
-    text-color:       @foreground;
+    text-color:       @active-foreground;
 }
 #element.selected.normal {
     background-color: @selected-background;
-    text-color:       #282a36;
+    text-color:       @selected-foreground;
 }
 #element.selected.urgent {
     background-color: @selected-urgent-background;
-    text-color:       @foreground;
+    text-color:       @selected-urgent-foreground;
 }
 #element.selected.active {
     background-color: @selected-active-background;
-    text-color:       @foreground;
+    text-color:       @selected-active-foreground;
 }
 #element.alternate.normal {
-    background-color: @background-color;
+    background-color: @background;
     text-color:       @foreground;
 }
 #element.alternate.urgent {
     background-color: @urgent-background;
-    text-color:       @foreground;
+    text-color:       @urgent-foreground;
 }
 #element.alternate.active {
     background-color: @active-background;
-    text-color:       @foreground;
+    text-color:       @active-foreground;
 }
 #scrollbar {
     width:        2px ;
@@ -100,12 +124,13 @@ configuration {
 }
 #button.selected {
     background-color: @selected-background;
-    text-color:       @foreground;
+    text-color:       @selected-foreground;
 }
 #inputbar {
     spacing:    0;
+    background-color: @background;
     text-color: @foreground;
-    padding:    1px ;
+    padding:    0;
 }
 #case-indicator {
     spacing:    0;
@@ -113,22 +138,28 @@ configuration {
 }
 #entry {
     spacing:    0;
-    text-color: @foreground;
+    background-color: @gray900;
+    text-color: @rose400;
+    placeholder-color: @rose200;
+    padding: 10px;
 }
+
 #prompt {
     spacing:    0;
-    text-color: @foreground;
+    background-color: @gray900;
+    text-color: @rose400;
+    padding: 10px;
 }
 #inputbar {
     children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
 }
 #textbox-prompt-colon {
     expand:     false;
-    str:        ">";
-    margin:     0px 0.3em 0em 0em ;
-    text-color: @foreground;
+    str:        "";
+    text-color: @selected-active-background;
 }
 element-text, element-icon {
     background-color: inherit;
     text-color: inherit;
+    padding: 3px;
 }
