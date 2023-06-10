@@ -153,8 +153,6 @@ bindsym $mod+Escape exec "i3-nagbar -t warning -m 'You pressed the exit shortcut
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
-
         bindsym h resize shrink width 1 px or 1 ppt
         bindsym j resize grow height 1 px or 1 ppt
         bindsym k resize shrink height 1 px or 1 ppt
