@@ -215,6 +215,28 @@ client.urgent           $red            $red            $foreground $cyan       
 client.placeholder      $purple         $purple         $foreground $cyan        $purple
 
 client.background       $background
+# #  Colors
+#
+# # Dracula palette
+# set $background #282a36
+# set $foreground #f8f8f2
+# set $current-line #44475a
+# set $cyan #8be9fd
+# set $green #50fa7b
+# set $orange #ffb86c
+# set $pink #ff79c6
+# set $purple #bd93f9
+# set $red #ff5555
+# set $yellow #f1fa8c
+#
+# # class                 border          backgr.         text        indicator   child_border
+# client.focused          $purple         $purple         $foreground $cyan        $purple
+# client.focused_inactive $current-line   $current-line   $foreground $cyan        $current-line
+# client.unfocused        $current-line   $current-line   $foreground $cyan        $current-line
+# client.urgent           $red            $red            $foreground $cyan        $red
+# client.placeholder      $purple         $purple         $foreground $cyan        $purple
+#
+# client.background       $background
 
 # Assign programs to workspaces
 assign [class="firefox"] $ws3
