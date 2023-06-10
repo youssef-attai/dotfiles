@@ -217,9 +217,7 @@ client.placeholder      $purple         $purple         $foreground $cyan       
 client.background       $background
 
 # Assign programs to workspaces
-assign [class="Vimb"] $ws3
-assign [class="Vieb"] $ws3
-assign [class="Google-chrome"] $ws3
+assign [class="firefox"] $ws3
 assign [class="Spotify"] $ws4
 assign [class="discord"] $ws5
 assign [class="VirtualBox Manager"] $ws7
