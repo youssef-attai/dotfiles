@@ -248,6 +248,7 @@ bindsym $mod+Ctrl+Shift+l exec --no-startup-id i3lock-fancy
 exec --no-startup-id alacritty --class Ranger,scratchpad -e ranger
 exec --no-startup-id alacritty --class Alacritty,scratchpad
 exec --no-startup-id alacritty --class Htop,scratchpad -e htop
+exec --no-startup-id alacritty --class Ncmpcpp,scratchpad -e ncmpcpp
 
 # Ranger scratchpad
 for_window [class="Ranger" instance="scratchpad"] move to scratchpad
@@ -260,6 +261,10 @@ bindsym $mod+Return [class="Alacritty" instance="scratchpad"] scratchpad show, r
 # Htop scratchpad
 for_window [class="Htop" instance="scratchpad"] move to scratchpad
 bindsym $mod+t [class="Htop" instance="scratchpad"] scratchpad show, resize set 1000 600; move position center;
+
+# Ncmpcpp scratchpad
+for_window [class="Ncmpcpp" instance="scratchpad"] move to scratchpad
+bindsym $mod+m [class="Ncmpcpp" instance="scratchpad"] scratchpad show, resize set 1000 600; move position center;
 
 # Clipmenu
 bindsym $mod+c exec --no-startup-id i3_clipboard_manager
