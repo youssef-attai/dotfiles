@@ -292,3 +292,7 @@ focus_follows_mouse no
 
 # Switch to last workspace
 # workspace_auto_back_and_forth yes
+
+# show/hide polybar with mod+`
+bindsym $mod+grave exec --no-startup-id polybar-msg cmd toggle
+
