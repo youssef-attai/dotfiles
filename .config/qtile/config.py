@@ -70,6 +70,10 @@ keys = [
 
     # Custom keybindings
 
+    # Screen lock
+    Key([mod, "control", "shift"], "l", lazy.spawn("wm_lock"),
+        desc="Lock screen"),
+
     # Change keyboard layout
     Key([mod], "space", lazy.widget["keyboardlayout"].next_keyboard(),
         desc="Next keyboard layout"),
