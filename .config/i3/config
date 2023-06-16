@@ -226,14 +226,14 @@ assign [class="discord"] $ws5
 assign [class="VirtualBox Manager"] $ws7
 
 # Screenshots
-bindsym Print exec --no-startup-id i3_screenshot full
-bindsym $mod+Print exec --no-startup-id i3_screenshot window
-bindsym Shift+Print exec --no-startup-id i3_screenshot select
+bindsym Print exec --no-startup-id wm_screenshot full
+bindsym $mod+Print exec --no-startup-id wm_screenshot window
+bindsym Shift+Print exec --no-startup-id wm_screenshot select
 
 # Clipboard Screenshots
-bindsym Ctrl+Print exec --no-startup-id i3_screenshot full -c
-bindsym $mod+Ctrl+Print exec --no-startup-id i3_screenshot window -c
-bindsym Ctrl+Shift+Print exec --no-startup-id i3_screenshot select -c
+bindsym Ctrl+Print exec --no-startup-id wm_screenshot full -c
+bindsym $mod+Ctrl+Print exec --no-startup-id wm_screenshot window -c
+bindsym Ctrl+Shift+Print exec --no-startup-id wm_screenshot select -c
 
 # Media keys
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
