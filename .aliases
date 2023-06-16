@@ -47,6 +47,7 @@ alias gl='git log'
 alias glo='git log --oneline'
 
 alias gp='git push'
+alias gpsu='git push --set-upstream'
 
 alias gpl='git pull --no-rebase'
 alias gplr='git pull --rebase'
