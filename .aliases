@@ -56,6 +56,8 @@ alias gf='git fetch'
 alias gfpr='git fetch --prune'
 
 alias grv='git remote -v'
+alias gra='git remote add'
+alias grr='git remote remove'
 
 alias grsts='git restore --staged'
 alias grst='git restore'
