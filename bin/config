@@ -103,3 +103,10 @@ if [ "$1" == "mpd" ]; then
     nvim ~/.config/mpd/mpd.conf
     exit 0
 fi
+
+# If first argument is qtile, then open qtile config file
+if [ "$1" == "qtile" ]; then
+    cd ~/.config/qtile
+    nvim ~/.config/qtile/config.py
+    exit 0
+fi
