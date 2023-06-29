@@ -2,8 +2,21 @@
 
 # Get first argument
 if [ -z "$1" ]; then
-    echo "No argument supplied"
-    exit 1
+  cd ~/.config
+  nvim ~/.config
+  exit 0
+fi
+
+if [ "$1" == "config" ]; then
+    cd ~/bin
+    nvim config
+    exit 0
+fi
+
+if [ "$1" == "help" ]; then
+    echo "Usage: config [config]"
+    echo "config: git, x, aliases, env, i3, nvim, zsh, polybar, rofi, dunst, picom, alacritty, ranger, mpd, qtile, neofetch"
+    exit 0
 fi
 
 # If first argument is git, then open git config file
