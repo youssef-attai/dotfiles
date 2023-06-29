@@ -1,6 +1,7 @@
 import os
-from libqtile import bar, layout, widget
-from libqtile.config import Click, Drag, Group, Key, Match, Screen, ScratchPad, DropDown
+import subprocess
+from libqtile import layout, hook, bar, widget
+from libqtile.config import Click, Drag, Group, Key, Match, ScratchPad, DropDown, Screen
 from libqtile.lazy import lazy
 
 colors = {
@@ -15,6 +16,8 @@ colors = {
     "yellow200":  "fef08a",
     "green500":  "22c55e",
     "black":  "000000",
+    "fuchsia900": "701a75",
+    "fuchsia600": "c026d3",
     "transparent": "00000000",
 }
 
@@ -47,7 +50,7 @@ keys = [
         desc="Grow window to the right"),
     Key([mod, "control"], "j", lazy.layout.grow_down(), desc="Grow window down"),
     Key([mod, "control"], "k", lazy.layout.grow_up(), desc="Grow window up"),
-    Key([mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
+    # Key([mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
 
     # Toggle between split and unsplit sides of stack.
     # Split = all windows displayed
@@ -66,7 +69,7 @@ keys = [
     Key([mod], "q", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "shift"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "Escape", lazy.shutdown(), desc="Shutdown Qtile"),
-    Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
+    # Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
 
     # Custom keybindings
 
@@ -78,7 +81,7 @@ keys = [
     Key([mod], "space", lazy.widget["keyboardlayout"].next_keyboard(),
         desc="Next keyboard layout"),
     # Fullscreen
-    Key([mod, "shift"], "f", lazy.window.toggle_fullscreen(),
+    Key([mod], "f", lazy.window.toggle_fullscreen(),
         desc="Toggle fullscreen"),
     # Floating windows
     Key([mod, "shift"], "Space",
@@ -114,6 +117,10 @@ keys = [
     Key([mod], "a", lazy.spawn("wm_program_launcher"),
         desc="Launch rofi"),
 
+    # Run prompt
+    Key([mod], "r", lazy.spawn("wm_run_prompt"),
+        desc="Launch rofi run prompt"),
+
     # Screenshots
     Key([], "Print", lazy.spawn("wm_screenshot full"),
         desc="Take screenshot"),
@@ -146,35 +153,19 @@ keys = [
     Key([mod], "n", lazy.spawn("wm_network_manager"),
         desc="Launch network manager"),
 
-    Key([mod], "grave", lazy.spawn("wm_system_info"),
-        desc="Show battery notification"),
-
+    # Toggle bar
+    Key([mod], "grave", lazy.hide_show_bar(), desc="Toggle visibility of Bar"),
 ]
 
 scratchpad_config = {
-    "height": 0.6,
-    "width": 0.6,
-    "x": 0.2,
-    "y": 0.2,
+    "height": 0.8,
+    "width": 0.8,
+    "x": 0.1,
+    "y": 0.1,
     "on_focus_lost_hide": True,
 }
 
-groups = [
-    Group("1", label=" Terminal"),
-    Group("2", label="󰅩 Code"),
-    Group("3", label=" Browser",
-          matches=[Match(wm_class=["firefox"])]),
-    Group("4", label=" Spotify",
-          matches=[Match(wm_class=["spotify"])]),
-    Group("5", label="󰙯 Discord",
-          matches=[Match(wm_class=["discord"])]),
-    Group("6", label=" VirtualBox",
-          matches=[Match(wm_class=["VirtualBox Manager"])]),
-    Group("7", label=" Misc"),
-    Group("8", label=" Misc"),
-    Group("9", label=" Misc"),
-    Group("0", label=" Misc"),
-]
+groups = [Group(i) for i in "1234567890"]
 
 for group in groups:
     keys.extend(
@@ -200,7 +191,7 @@ for group in groups:
 
 groups.append(ScratchPad("scratchpad", [
     DropDown("term", "alacritty", **scratchpad_config),
-    DropDown("ranger", "alacritty -e ranger", **scratchpad_config),
+    # DropDown("ranger", "alacritty -e ranger", **scratchpad_config),
     DropDown("htop", "alacritty -e htop", **scratchpad_config),
     DropDown("ncmpcpp", "alacritty -e ncmpcpp", **scratchpad_config),
 ]))
@@ -213,8 +204,8 @@ keys.extend(
             desc="Toggle terminal dropdown"),
 
         # File manager
-        Key([mod], "f", lazy.group["scratchpad"].dropdown_toggle("ranger"),
-            desc="Toggle file manager dropdown"),
+        # Key([mod], "f", lazy.group["scratchpad"].dropdown_toggle("ranger"),
+        #     desc="Toggle file manager dropdown"),
 
         # System monitor
         Key([mod], "s", lazy.group["scratchpad"].dropdown_toggle("htop"),
@@ -226,8 +217,18 @@ keys.extend(
     ])
 
 layouts = [
-    layout.Columns(border_width=0,),
-    layout.Max(),
+    layout.Columns(
+        border_width=2,
+        border_focus=colors["fuchsia600"],
+        border_normal=colors["fuchsia900"],
+        border_on_single=True,
+        margin=8,
+    ),
+    layout.Max(
+        border_width=0,
+        # border_focus=colors["fuchsia600"],
+        margin=8,
+    ),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
     # layout.Bsp(),
@@ -244,7 +245,7 @@ layouts = [
 widget_defaults = dict(
     font="DejaVuSansM Nerd Font",
     fontsize=14,
-    padding=4,
+    padding=5,
 )
 extension_defaults = widget_defaults.copy()
 
@@ -256,35 +257,57 @@ screens = [
                 center_aligned=True,
                 hide_unused=True,
                 rounded=False,
-                this_current_screen_border=colors["red600"],
+                this_current_screen_border=colors["fuchsia600"],
                 highlight_color=[colors["black"], colors["black"]],
                 inactive="666666",
                 active=colors["gray50"],
                 use_mouse_wheel=False,
+                disable_drag=True,
             ),
             widget.Spacer(),
             widget.Systray(),
-            widget.Spacer(),
+            widget.Sep(padding=10),
+            widget.Wlan(
+                format="  {essid}",
+                disconnected_message="  Disconnected",
+            ),
+            widget.Sep(padding=10),
             widget.Battery(
                 # Battery icon {char} and percentage {percent:2.0%
-                format=" {char} {percent:2.0%}",
+                format="{char} {percent:2.0%}",
                 charge_char="🔌 Charging",
                 discharge_char="⚡ Discharging",
                 empty_char="🪫 BATTERY LOW",
                 full_char="🔋 FULL BATTERY",
-                unknown_char="Loading battery info...",
+                unknown_char="???",
+                notify_below=30,
+                show_short_text=False,
+                update_interval=5,
             ),
+            widget.Sep(padding=10),
             widget.KeyboardLayout(
                 configured_keyboards=["us", "ara"],
-                display_map={"us": "🇺🇸 US", "ara": "🇪🇬 AR"},
+                display_map={"us": "🇺🇸 EN", "ara": "🇪🇬 AR"},
                 option="grp:win_space_toggle",
             ),
-            widget.Clock(format="%A, %d %B", fmt="📅 {}"),
-            widget.Clock(format="%H:%M %p", fmt="🕒 {}"),
-            widget.CurrentLayoutIcon(scale=0.65),
-            widget.Prompt(
-                prompt="Run: ",
+            widget.Sep(padding=10),
+            widget.Backlight(
+                backlight_name="intel_backlight",
+                fmt="🔆 {}",
+                step=1,
             ),
+            widget.Sep(padding=10),
+            widget.Volume(
+                emoji=True,
+                fmt='{}'
+            ),
+            widget.Volume(),
+            widget.Sep(padding=10),
+            widget.Clock(format="%a, %d %B", fmt="📅 {}"),
+            widget.Sep(padding=10),
+            widget.Clock(format="%l:%M %p", fmt="🕒 {}"),
+            widget.Sep(padding=10),
+            widget.CurrentLayoutIcon(scale=0.65),
         ], 24)),
 ]
 
@@ -304,6 +327,7 @@ bring_front_click = False
 cursor_warp = False
 floating_layout = layout.Floating(
     border_width=0,
+    # border_focus=colors["fuchsia600"],
     float_rules=[
         # Run the utility of `xprop` to see the wm class and name of an X client.
         *layout.Floating.default_float_rules,
@@ -326,12 +350,10 @@ auto_minimize = True
 # When using the Wayland backend, this can be used to configure input devices.
 wl_input_rules = None
 
-# XXX: Gasp! We're lying here. In fact, nobody really uses or cares about this
-# string besides java UI toolkits; you can see several discussions on the
-# mailing lists, GitHub issues, and other WM documentation that suggest setting
-# this string if your java app doesn't work correctly. We may as well just lie
-# and say that we're a working one by default.
-#
-# We choose LG3D to maximize irony: it is a 3D non-reparenting WM written in
-# java that happens to be on java's whitelist.
 wmname = "LG3D"
+
+
+@hook.subscribe.startup_once
+def autostart():
+    # Set brightness to 1% on startup
+    subprocess.call(["xbacklight", "-set", "1"])
