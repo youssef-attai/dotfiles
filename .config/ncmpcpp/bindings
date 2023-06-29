@@ -156,16 +156,16 @@
 #
 #def_key "mouse"
 #  mouse_event
-#
-#def_key "up"
-#  scroll_up
+
+def_key "k"
+ scroll_up
 #
 #def_key "shift-up"
 #  select_item
 #  scroll_up
 #
-#def_key "down"
-#  scroll_down
+def_key "j"
+ scroll_down
 #
 #def_key "shift-down"
 #  select_item
@@ -219,35 +219,35 @@
 #def_key "space"
 #  toggle_visualization_type
 #
-#def_key "delete"
-#  delete_playlist_items
+def_key "d"
+ delete_playlist_items
 #
-#def_key "delete"
-#  delete_browser_items
+def_key "d"
+ delete_browser_items
 #
-#def_key "delete"
-#  delete_stored_playlist
+def_key "d"
+ delete_stored_playlist
 #
-#def_key "right"
-#  next_column
+def_key "l"
+ next_column
 #
-#def_key "right"
-#  slave_screen
+def_key "l"
+ slave_screen
 #
-#def_key "right"
-#  volume_up
+def_key "l"
+ volume_up
 #
 #def_key "+"
 #  volume_up
 #
-#def_key "left"
-#  previous_column
+def_key "h"
+ previous_column
 #
-#def_key "left"
-#  master_screen
+def_key "h"
+ master_screen
 #
-#def_key "left"
-#  volume_down
+def_key "h"
+ volume_down
 #
 #def_key "-"
 #  volume_down
