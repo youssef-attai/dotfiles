@@ -1,5 +1,5 @@
 ### ---- PATH config ----------------------------------------
-export PATH=$HOME/bin:$HOME/.local/bin:$HOME/flutter/bin:$HOME/.pub-cache/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:$HOME/flutter/flutter/bin:$HOME/.pub-cache/bin:$PATH
 
 ### ---- General config -------------------------------------
 export EDITOR='nvim'
