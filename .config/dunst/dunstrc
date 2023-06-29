@@ -436,4 +436,8 @@
 #    appname = "some_volume_notifiers"
 #    set_stack_tag = "volume"
 
+[play_sound]
+    summary = "*"
+    script = "/home/attai/bin/play_notification_sound"
+
 # vim: ft=cfg
