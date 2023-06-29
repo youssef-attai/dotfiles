@@ -1,0 +1,46 @@
+#!/usr/bin/env bash
+
+# Define the battery level thresholds (in percentage)
+LOW_THRESHOLD=25
+HIGH_THRESHOLD=95
+
+# Variables to track if a notification has been sent
+LOW_ALERT_SENT=0
+HIGH_ALERT_SENT=0
+
+while true; do
+    # Get the current battery level and status
+    BATTERY_INFO=$(acpi -b)
+    BATTERY_LEVEL=$(echo $BATTERY_INFO | grep -P -o '[0-9]+(?=%)')
+    BATTERY_STATUS=$(echo $BATTERY_INFO | grep -P -o 'Discharging|Charging')
+
+    echo "Battery level: ${BATTERY_LEVEL}%"
+    echo "Battery status: ${BATTERY_STATUS}"
+    echo "Low alert sent: ${LOW_ALERT_SENT}"
+    echo "High alert sent: ${HIGH_ALERT_SENT}"
+
+    # Check if the battery level is below the low threshold and the battery is discharging
+    if (( BATTERY_LEVEL <= LOW_THRESHOLD )) && [ "$BATTERY_STATUS" = "Discharging" ] && [ "$LOW_ALERT_SENT" -eq 0 ]; then
+        # Send a low battery notification
+        notify-send "BATTERY LOW" "Please connect your charger." -u critical
+        # Mark that the low battery alert has been sent
+        LOW_ALERT_SENT=1
+    elif (( BATTERY_LEVEL > LOW_THRESHOLD )); then
+        # Reset the low battery alert sent flag when the battery level goes above the low threshold
+        LOW_ALERT_SENT=0
+    fi
+
+    # Check if the battery level is above the high threshold and the battery is charging
+    if (( BATTERY_LEVEL >= HIGH_THRESHOLD )) && [ "$BATTERY_STATUS" = "Charging" ] && [ "$HIGH_ALERT_SENT" -eq 0 ]; then
+        # Send a battery full notification
+        notify-send "BATTERY FULL" "You can disconnect your charger." -u critical
+        # Mark that the high battery alert has been sent
+        HIGH_ALERT_SENT=1
+    elif (( BATTERY_LEVEL < HIGH_THRESHOLD )); then
+        # Reset the high battery alert sent flag when the battery level goes below the high threshold
+        HIGH_ALERT_SENT=0
+    fi
+
+    # Sleep for 1 second before the next check
+    sleep 1
+done
