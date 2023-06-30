@@ -1,6 +1,14 @@
-# Dotfiles
+<h1 align="center">
+    Dotfiles
+</h1>
 
-A guide for setting up my desktop in case I "accidently" mess up real bad.
+<p align="center">
+    A guide for setting up my desktop in case I "accidently" mess up real bad.
+</p>
+
+<p align="center">
+    <img src="./pictures/screenshots/homesweethome.png" alt="Home Sweet Home" />
+</p>
 
 ## Software
 
