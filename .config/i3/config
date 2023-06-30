@@ -183,6 +183,17 @@ exec --no-startup-id xbacklight -set 1
 # i3 layouts
 exec_always --no-startup-id i3-layouts
 
+set $i3l 2columns to workspace $ws1
+set $i3l 2columns to workspace $ws2
+set $i3l 2columns to workspace $ws3
+set $i3l 2columns to workspace $ws4
+set $i3l 2columns to workspace $ws5
+set $i3l 2columns to workspace $ws6
+set $i3l 2columns to workspace $ws7
+set $i3l 2columns to workspace $ws8
+set $i3l 2columns to workspace $ws9
+set $i3l 2columns to workspace $ws10
+
 bindsym $mod+Mod1+v exec i3l vstack
 bindsym $mod+Mod1+h exec i3l hstack
 bindsym $mod+Mod1+c exec i3l 2columns
