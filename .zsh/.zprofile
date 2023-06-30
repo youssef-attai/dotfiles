@@ -17,3 +17,6 @@ export VIDEOS_DIR=$HOME/videos
 export DOCUMENTS_DIR=$HOME/documents
 export PROJECTS_DIR=$HOME/projects
 
+if [[ "$(tty)" = "/dev/tty1" ]]; then
+	pgrep i3 || startx
+fi
