@@ -118,6 +118,18 @@ The tiling window manager
 sudo pacman -S i3-wm
 ```
 
+### [i3-layouts](https://github.com/eliep/i3-layouts)
+
+Facilitates dealing with layouts for i3.
+
+- Installation:
+
+From the [AUR](https://aur.archlinux.org/packages/i3-layouts)
+
+```bash
+yay -S i3-layouts
+```
+
 ### [i3lock-fancy](https://github.com/meskarune/i3lock-fancy)
 
 A screen locker.
