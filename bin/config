@@ -15,7 +15,7 @@ fi
 
 if [ "$1" == "help" ]; then
     echo "Usage: config [config]"
-    echo "config: git, x, aliases, env, i3, nvim, zsh, polybar, rofi, dunst, picom, alacritty, ranger, mpd, qtile, neofetch"
+    echo "config: git, x, aliases, env, i3, nvim, zsh, polybar, rofi, dunst, picom, alacritty, mpd, neofetch"
     exit 0
 fi
 
@@ -103,24 +103,10 @@ if [ "$1" == "alacritty" ]; then
     exit 0
 fi
 
-# If first argument is ranger, then open ranger config file
-if [ "$1" == "ranger" ]; then
-    cd ~/.config/ranger
-    nvim ~/.config/ranger/rc.conf
-    exit 0
-fi
-
 # If first argument is mpd, then open mpd config file
 if [ "$1" == "mpd" ]; then
     cd ~/.config/mpd
     nvim ~/.config/mpd/mpd.conf
-    exit 0
-fi
-
-# If first argument is qtile, then open qtile config file
-if [ "$1" == "qtile" ]; then
-    cd ~/.config/qtile
-    nvim ~/.config/qtile/config.py
     exit 0
 fi
 
