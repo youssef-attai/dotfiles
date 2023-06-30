@@ -436,8 +436,12 @@
 #    appname = "some_volume_notifiers"
 #    set_stack_tag = "volume"
 
-[play_sound]
-    summary = "*"
-    script = "/home/attai/bin/play_notification_sound"
+[normal_play_sound]
+    msg_urgency = normal
+    script = "/home/attai/bin/play_normal_notification_sound"
+
+[critical_play_sound]
+    msg_urgency = critical
+    script = "/home/attai/bin/play_critical_notification_sound"
 
 # vim: ft=cfg
