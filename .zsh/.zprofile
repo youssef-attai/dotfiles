@@ -7,7 +7,6 @@ export VISUAL='nvim'
 export PAGER='less'
 export BROWSER='firefox'
 export TERMINAL='alacritty'
-export FILEMANAGER='ranger'
 
 ### ---- Directory config -----------------------------------
 export PICTURES_DIR=$HOME/pictures
