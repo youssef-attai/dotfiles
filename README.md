@@ -1,6 +1,10 @@
-# My Arch Linux Config Files
+# Dotfiles
+
+A guide for setting up my desktop in case I "accidently" mess up real bad.
 
 ## Software
+
+All the programs I use.
 
 ### [zsh](https://archlinux.org/packages/extra/x86_64/zsh/)
 
