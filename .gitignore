@@ -1,18 +1,23 @@
 .cache/
 .env
 
+.*
+
 **/node_modules/
 **/dist/
 **/build/
 **/.venv/
 **/*history*
 *.log
+.config/
 
-Pictures
-Downloads
-Videos
-projects
-revanced
-vm
-git
-aur
+Android/
+pictures/
+documents/
+downloads/
+videos/
+projects/
+revanced/
+vm/
+git/
+aur/
