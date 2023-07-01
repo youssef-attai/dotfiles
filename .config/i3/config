@@ -90,7 +90,7 @@ bindsym $mod+Ctrl+l resize grow width 1 px or 1 ppt
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Gaps
-gaps inner 8
+gaps inner 12
 
 # Remove borders
 for_window [class="^.*"] border none
