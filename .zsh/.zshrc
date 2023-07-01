@@ -4,12 +4,9 @@ zstyle ':completion:*' completer _extensions _complete _approximate
 zstyle ':completion:*' menu yes select
 zmodload zsh/complist
 
-### ---- Clipmenu config ------------------------------------
-export CM_LAUNCHER=rofi
-
 ### ---- Chrome executable ----------------------------------
 export CHROME_EXECUTABLE=google-chrome-stable
-#
+
 ### ZSH HOME
 export ZSH=$HOME/.zsh
 
