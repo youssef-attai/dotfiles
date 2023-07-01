@@ -1,5 +1,6 @@
 ### ---- PATH config ----------------------------------------
-export PATH=$HOME/bin:$HOME/.local/bin:$HOME/flutter/flutter/bin:$HOME/.pub-cache/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:$PATH
+export PATH=/opt/flutter/bin:$HOME/.pub-cache/bin:$PATH
 
 ### ---- General config -------------------------------------
 export EDITOR='nvim'
@@ -17,6 +18,7 @@ export VIDEOS_DIR=$HOME/videos
 export DOCUMENTS_DIR=$HOME/documents
 export PROJECTS_DIR=$HOME/projects
 
+### ---- Auto start -----------------------------------------
 if [[ "$(tty)" = "/dev/tty1" ]]; then
 	pgrep i3 || startx
 fi
