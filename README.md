@@ -25,3 +25,14 @@ and to have `/` and `/home` on separate partitions.
 ## Setting up the environment
 
 See the [wiki](https://github.com/youssef-attai/dotfiles/wiki/).
+
+## Quick overview
+
+- **Shell:** zsh
+- **Window manager:** i3
+- **Editor:**: Neovim
+- **Browser:**: Firefox
+- **File manager:** Thunar
+- **Compositor:** picom
+- **Bar:** Polybar
+- **Fonts:** JetBrains Mono + Nerd Fonts Symbols Only
