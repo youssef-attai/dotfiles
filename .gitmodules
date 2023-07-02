@@ -5,14 +5,8 @@
 	path = .zsh/plugins/fast-syntax-highlighting
 	url = https://github.com/zdharma-zmirror/fast-syntax-highlighting
 [submodule ".zsh/plugins/zsh-autosuggestions"]
-    path = .zsh/plugins/zsh-autosuggestions
-    url = https://github.com/zsh-users/zsh-autosuggestions
+  path = .zsh/plugins/zsh-autosuggestions
+  url = https://github.com/zsh-users/zsh-autosuggestions
 [submodule ".zsh/plugins/zsh-completions"]
-    path = .zsh/plugins/zsh-completions
-    url = https://github.com/zsh-users/zsh-completions
-[submodule ".zsh/themes/spaceship-prompt"]
-    path = .zsh/themes/spaceship-prompt
-    url = https://github.com/spaceship-prompt/spaceship-prompt
-[submodule "zsh-autopair"]
-	path = .zsh/plugins/zsh-autopair
-	url = https://github.com/hlissner/zsh-autopair
+  path = .zsh/plugins/zsh-completions
+  url = https://github.com/zsh-users/zsh-completions
