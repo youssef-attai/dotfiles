@@ -5,3 +5,6 @@ symbol = '󰌠 '
 
 [dart]
 symbol = ' '
+
+[lua]
+symbol = ' '
