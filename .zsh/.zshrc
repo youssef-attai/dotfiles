@@ -4,6 +4,9 @@ zstyle ':completion:*' completer _extensions _complete _approximate
 zstyle ':completion:*' menu yes select
 zmodload zsh/complist
 
+### ---- PROMPT -------------------------------------------
+eval "$(starship init zsh)"
+
 ### ---- Chrome executable ----------------------------------
 export CHROME_EXECUTABLE=google-chrome-stable
 
@@ -77,7 +80,6 @@ zle-line-init() {
 zle -N zle-line-init
 
 ### ---- PLUGINS -----------------------------------
-source $ZSH/themes/spaceship-prompt/spaceship.zsh-theme
 source $ZSH/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 source $ZSH/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
@@ -85,26 +87,6 @@ source $ZSH/plugins/zsh-autopair/autopair.zsh
 autopair-init
 
 fpath=($ZSH/plugins/zsh-completions/src $fpath)
-
-### --- Spaceship Config ------------------------------------
-SPACESHIP_PROMPT_ORDER=(
-  venv
-  user          # Username section
-  dir           # Current directory section
-  host          # Hostname section
-  git           # Git section (git_branch + git_status)
-  # hg            # Mercurial section (hg_branch  + hg_status)
-  exec_time     # Execution time
-  line_sep      # Line break
-  # vi_mode       # Vi-mode indicator
-  jobs          # Background jobs indicator
-  exit_code     # Exit code section
-  char          # Prompt character
-)
-SPACESHIP_USER_SHOW=always
-SPACESHIP_PROMPT_ADD_NEWLINE=false
-SPACESHIP_CHAR_SYMBOL="❯"
-SPACESHIP_CHAR_SUFFIX=" "
 
 ### ---- ALIASES -------------------------------------------
 source $HOME/.aliases
