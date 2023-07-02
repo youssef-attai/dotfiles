@@ -13,7 +13,7 @@
 ## Arch installation
 
 Using the `archinstall` script from the package repository
-(NOT the one that comes by default with the ISO, apparently there is a difference)
+(NOT the one that comes by default with the ISO, apparently there is a difference):
 
 ```bash
 sudo pacman -S archinstall
