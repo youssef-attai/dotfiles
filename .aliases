@@ -67,3 +67,6 @@ alias gm='git merge'
 
 # fzf
 alias sd='cd $(find * -type d 2>/dev/null | fzf)'
+
+# Lazygit
+alias lg='lazygit'
