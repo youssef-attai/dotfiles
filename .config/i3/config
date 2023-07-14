@@ -166,7 +166,7 @@ bindsym $mod+e exec --no-startup-id wm_emoji_picker
 bindsym $mod+p exec --no-startup-id wm_power_menu
 
 # Firefox
-bindsym $mod+b exec --no-startup-id $BROWSER
+bindsym $mod+b exec --no-startup-id wm_browser
 
 # Focus on window activation
 focus_on_window_activation focus
