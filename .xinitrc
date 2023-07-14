@@ -1,3 +1,4 @@
+setxkbmap -layout us,ara &
 picom --no-vsync &
 clipmenud &
 dunst &
