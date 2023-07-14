@@ -91,8 +91,5 @@ fpath=($ZSH/plugins/zsh-completions/src $fpath)
 ### ---- ALIASES -------------------------------------------
 source $HOME/.aliases
 
-### --- ENV VARS -------------------------------------------
-source $HOME/.env
-
 ### NEOFETCH
 neofetch
