@@ -7,16 +7,15 @@ export PATH="$HOME/.detaspace/bin:$PATH"
 export EDITOR='nvim'
 export VISUAL='nvim'
 export PAGER='less'
-export BROWSER='firefox'
 export TERMINAL='alacritty'
 export TERM='alacritty'
 
 ### ---- Directory config -----------------------------------
-export PICTURES_DIR=$HOME/pictures
-export DOWNLOADS_DIR=$HOME/downloads
-export MUSIC_DIR=$HOME/music
-export VIDEOS_DIR=$HOME/videos
-export DOCUMENTS_DIR=$HOME/documents
+export PICTURES_DIR=$HOME/Pictures
+export DOWNLOADS_DIR=$HOME/Downloads
+export MUSIC_DIR=$HOME/Music
+export VIDEOS_DIR=$HOME/Videos
+export DOCUMENTS_DIR=$HOME/Documents
 export PROJECTS_DIR=$HOME/projects
 
 ### ---- Auto start -----------------------------------------
