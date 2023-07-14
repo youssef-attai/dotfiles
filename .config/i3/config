@@ -6,8 +6,13 @@ exec --no-startup-id dex --autostart --environment i3
 
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock-fancy --nofork
 
-bindsym XF86MonBrightnessUp exec xbacklight -inc 1
-bindsym XF86MonBrightnessDown exec xbacklight -dec 1
+bindsym XF86MonBrightnessUp exec wm_brightness up 1
+bindsym XF86MonBrightnessDown exec wm_brightness down 1
+bindsym Ctrl+XF86MonBrightnessUp exec wm_brightness up 10
+bindsym Ctrl+XF86MonBrightnessDown exec wm_brightness down 10
+bindsym $mod+XF86MonBrightnessUp exec wm_brightness max
+bindsym $mod+XF86MonBrightnessDown exec wm_brightness min
+
 
 floating_modifier $mod
 
