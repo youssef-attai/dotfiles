@@ -70,3 +70,6 @@ alias sd='cd $(find * -type d 2>/dev/null | fzf)'
 
 # Lazygit
 alias lg='lazygit'
+
+# Android emulator
+alias emulator='$ANDROID_HOME/tools/emulator'
