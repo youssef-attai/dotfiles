@@ -31,7 +31,7 @@ See the [wiki](https://github.com/youssef-attai/dotfiles/wiki/).
 - **Shell:** zsh
 - **Window manager:** i3
 - **Editor:**: Neovim
-- **Browser:**: Firefox
+- **Browser:**: Google Chrome
 - **File manager:** Thunar
 - **Compositor:** picom
 - **Bar:** Polybar
