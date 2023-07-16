@@ -1,0 +1,11 @@
+[user]
+	email = youssefgalalnazem@gmail.com
+	name = Youssef Atta'i
+[credential]
+	helper = store
+[core]
+	editor = nvim
+[init]
+	defaultBranch = main
+[safe]
+	directory = /opt/flutter

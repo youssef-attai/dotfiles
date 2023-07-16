@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# This script will show a power menu and play a dramatic sound effect
+# that stops when the menu is closed.
+
+paplay $HOME/.local/share/sounds/betrayal.mp3 &
+paplay_pid=$!
+options="Shutdown\nReboot\nLock\nLogout"
+choice=$(echo -e $options | rofi -dmenu -p "Power Menu")
+case "$choice" in
+    Lock) loginctl lock-session ${XDG_SESSION_ID-} ;;
+    Logout) loginctl terminate-session ${XDG_SESSION_ID-} ;;
+    Reboot) systemctl reboot ;;
+    Shutdown) systemctl poweroff ;;
+esac
+
+kill $paplay_pid
