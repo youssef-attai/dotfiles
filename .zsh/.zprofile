@@ -26,6 +26,7 @@ export MUSIC_DIR=$HOME/Music
 export VIDEOS_DIR=$HOME/Videos
 export DOCUMENTS_DIR=$HOME/Documents
 export PROJECTS_DIR=$HOME/projects
+export SOUNDS_DIR=$HOME/.local/share/sounds
 
 ### ---- Auto start -----------------------------------------
 if [[ "$(tty)" = "/dev/tty1" ]]; then

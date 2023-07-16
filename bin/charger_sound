@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Path to the sound file
-sound_file="$HOME/.local/share/sounds/success.mp3"
+sound_file="$SOUNDS_DIR/notification/1.mp3"
 
 # Previous state of the AC adapter
 prev_state=$(acpi -a | cut -d' ' -f3 | cut -d- -f1)
