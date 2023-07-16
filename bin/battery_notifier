@@ -2,7 +2,7 @@
 
 # Define the battery level thresholds (in percentage)
 LOW_THRESHOLD=25
-HIGH_THRESHOLD=95
+HIGH_THRESHOLD=85
 
 # Variables to track if a notification has been sent
 LOW_ALERT_SENT=0
