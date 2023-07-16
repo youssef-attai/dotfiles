@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-    <img src="./pictures/screenshots/homesweethome.png" alt="Home Sweet Home" />
+    <img src="./Pictures/screenshots/homesweethome.png" alt="Home Sweet Home" />
 </p>
 
 ## Arch installation
