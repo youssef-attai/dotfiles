@@ -116,29 +116,29 @@ Create 3 partitions:
 
 1. Boot partition
 
-type is fat32
-start at 3iMB
-ends at 203MiB
-mountpoint = /boot [via menu option: `assign mount point for a partition`]
-boot = True [via menu option: `Mark/unmark a partition as bootable`]
-Wipe = True [via menu option: `Mark/unmark a partition to be formatted`]
-Repeat the above steps for the root partition.
+- type is fat32
+- start at 3iMB
+- ends at 203MiB
+- mountpoint = /boot [via menu option: `assign mount point for a partition`]
+- boot = True [via menu option: `Mark/unmark a partition as bootable`]
+- Wipe = True [via menu option: `Mark/unmark a partition to be formatted`]
+- Repeat the above steps for the root partition.
 
 2. Root partition
 
-type is ext4
-start at 206MiB
-ends: 100GB
-mountpoint = / [via menu option: `assign mount point for a partition`]
-Wipe = True [via menu option: `Mark/unmark a partition to be formatted`]
+- type is ext4
+- start at 206MiB
+- ends: 100GB
+- mountpoint = / [via menu option: `assign mount point for a partition`]
+- Wipe = True [via menu option: `Mark/unmark a partition to be formatted`]
 
 3. Home partition
 
-type is ext4
-start at 100GB
-ends: 100%
-mountpoint = /home [via menu option: `assign mount point for a partition`]
-Wipe = True [via menu option: `Mark/unmark a partition to be formatted`]
+- type is ext4
+- start at 100GB
+- ends: 100%
+- mountpoint = /home [via menu option: `assign mount point for a partition`]
+- Wipe = True [via menu option: `Mark/unmark a partition to be formatted`]
 
 ## Setting up the environment
 
