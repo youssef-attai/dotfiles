@@ -55,3 +55,7 @@ projects/
 git/
 aur/
 Pictures/screenshots/
+.config/GIMP/
+.config/configstore/
+.dartServer/
+Documents/
