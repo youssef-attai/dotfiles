@@ -59,3 +59,5 @@ Pictures/screenshots/
 .config/configstore/
 .dartServer/
 Documents/
+.config/PostmanAgent/
+.config/discord/
