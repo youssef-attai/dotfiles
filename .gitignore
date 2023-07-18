@@ -54,7 +54,10 @@ base/
 projects/
 git/
 aur/
-Pictures/screenshots/
+Pictures/
+!Pictures/bg.png
+!Pictures/bg.xcf
+!Pictures/screenshots/homesweethome.png
 .config/GIMP/
 .config/configstore/
 .dartServer/
