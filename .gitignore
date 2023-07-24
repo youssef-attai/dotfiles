@@ -65,3 +65,5 @@ Documents/
 .config/PostmanAgent/
 .config/discord/
 .config/xarchiver/
+.java/
+.config/QtProject.conf
