@@ -71,3 +71,6 @@ Documents/
 .config/Postman/
 .gnupg/
 .config/libreoffice
+.config/gtk-2.0/gtkfilechooser.ini
+.config/MongoDB Compass/
+.mongodb/
