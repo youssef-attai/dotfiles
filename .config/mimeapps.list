@@ -9,6 +9,7 @@ x-scheme-handler/postman=Postman.desktop
 
 [Added Associations]
 application/pdf=google-chrome.desktop;org.pwmt.zathura-pdf-mupdf.desktop;
-image/png=nsxiv.desktop;
-image/jpeg=nsxiv.desktop;
-image/svg+xml=org.inkscape.Inkscape.desktop;google-chrome.desktop;nsxiv.desktop;
+image/png=gimp.desktop;nsxiv.desktop;
+image/jpeg=gimp.desktop;nsxiv.desktop;
+image/svg+xml=gimp.desktop;org.inkscape.Inkscape.desktop;nvim.desktop;google-chrome.desktop;nsxiv.desktop;
+application/xml=nvim.desktop;
