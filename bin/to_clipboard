@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+if [ $# -eq 0 ]; then
+  echo "Usage: $0 <command>"
+  exit 1
+fi
+
+# Run the given command and store its output in a variable
+output=$(eval "$@")
+
+# Check if the command executed successfully
+if [ $? -eq 0 ]; then
+  # Copy the command output to the Xclip selection clipboard
+  echo -n "$output" | xclip -selection clipboard
+  echo "Command output copied to clipboard."
+else
+  echo "Error: The command could not be executed successfully."
+fi
+
