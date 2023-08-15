@@ -74,3 +74,5 @@ Documents/
 .config/gtk-2.0/gtkfilechooser.ini
 .config/MongoDB Compass/
 .mongodb/
+.flutter-devtools/
+.python_history
