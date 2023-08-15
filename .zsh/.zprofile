@@ -29,6 +29,6 @@ export PROJECTS_DIR=$HOME/projects
 export SOUNDS_DIR=$HOME/.local/share/sounds
 
 ### ---- Auto start -----------------------------------------
-if [[ "$(tty)" = "/dev/tty1" ]]; then
-	pgrep i3 || startx
-fi
+# if [[ "$(tty)" = "/dev/tty1" ]]; then
+# 	pgrep i3 || startx
+# fi
