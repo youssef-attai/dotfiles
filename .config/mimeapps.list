@@ -13,3 +13,4 @@ image/png=gimp.desktop;nsxiv.desktop;
 image/jpeg=gimp.desktop;nsxiv.desktop;
 image/svg+xml=gimp.desktop;org.inkscape.Inkscape.desktop;nvim.desktop;google-chrome.desktop;nsxiv.desktop;
 application/xml=nvim.desktop;
+text/plain=nvim.desktop;
