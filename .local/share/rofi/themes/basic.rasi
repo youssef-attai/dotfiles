@@ -1,0 +1,97 @@
+* {
+    black: #000000;
+    white: #ffffff;
+    red:   #ff0000;
+
+    width: 600;
+    font: "JetBrains Mono 10";
+}
+
+element-text, element-icon , mode-switcher {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+window {
+    height: 400px;
+    border: 1px;
+    border-color: @white;
+    background-color: @black;
+}
+
+mainbox {
+  background-color: @black;
+}
+
+inputbar {
+  children: [prompt,entry];
+  background-color: @black;
+}
+
+prompt {
+  margin: 20px 0px 0px 20px;
+  background-color: @black;
+  text-color: @white;
+}
+
+textbox-prompt-colon {
+    expand: false;
+    str: ":";
+}
+
+entry {
+  margin: 20px 0px 0px 10px;
+  background-color: @black;
+  text-color: @white;
+}
+
+listview {
+  columns: 3;
+  lines: 5;
+  background-color: @black;
+  text-color: @white;
+}
+
+element {
+  padding: 4px;
+  background-color: @black;
+  text-color: @white;
+}
+
+element-icon {
+    size: 16px;
+    padding: 0 4px;
+}
+
+element selected {
+  background-color: @white;
+  text-color: @black;
+}
+
+mode-switcher {
+  spacing: 0;
+}
+
+button {
+  padding: 4px;
+  background-color: @black;
+  text-color: @white;
+}
+
+button selected {
+  background-color: @white;
+  text-color: @black;
+}
+
+message {
+  margin: 2px;
+  padding: 2px;
+  border-radius: 5px;
+  background-color: @white;
+  text-color: @red;
+}
+
+textbox {
+  padding: 6px;
+  margin: 20px 0px 0px 20px;
+}
