@@ -1,0 +1,10 @@
+format = "$all"
+
+[python]
+symbol = '󰌠 '
+
+[dart]
+symbol = ' '
+
+[lua]
+symbol = ' '
