@@ -56,6 +56,4 @@ battery_charger_sounds &
 battery_notifier &
 ~/.fehbg &
 reminderd &
-water_reminder &
-food_reminder &
 exec bspwm
