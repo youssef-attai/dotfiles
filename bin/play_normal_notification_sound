@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-paplay $SOUNDS_DIR/notification/3.mp3
