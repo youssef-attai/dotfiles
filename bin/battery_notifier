@@ -17,5 +17,5 @@ do
     icon="$HOME/Pictures/svg/battery-low.svg"
     dunstify "Battery Low ($battery_level%)" "Please Connect Charger" -i $icon -t 5000 -u critical
   fi
-  sleep 60
+  sleep 30
 done
