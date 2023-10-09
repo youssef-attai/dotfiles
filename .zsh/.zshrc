@@ -29,9 +29,6 @@ autoload -Uz compinit
 compinit
 source /usr/share/zsh/plugins/fzf-tab-git/fzf-tab.plugin.zsh
 
-# ZSH Fast Syntax Highlighting
-source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
-
 # ZSH Vi Mode
 source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
@@ -42,8 +39,14 @@ autopair-init
 # ZSH Autosuggestions
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+# ZSH Syntax Highlighting
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 ### ---- ALIASES -------------------------------------------
 source $HOME/.aliases
+
+### --- GTK Dark theme
+export GTK_THEME=Adwaita:dark
 
 ### NEOFETCH
 neofetch

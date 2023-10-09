@@ -1,17 +1,5 @@
-configuration{
-    modi: "run,drun,window,emoji";
-    show-icons: true;
-    terminal: "alacritty";
-    drun-display-format: "{icon} {name}";
-    location: 0;
-    disable-history: false;
-    hide-scrollbar: true;
-    display-drun: " 󰀻  Apps ";
-    display-run: "   Run ";
-    display-window: "   Windows";
-    display-emoji: " 󰞅  Emojis";
-    display-Network: " 󰤨  Network";
-    sidebar-mode: true;
-}
+@theme "/home/attai/.local/share/rofi/themes/spotlight-dark.rasi"
 
-@theme "basic"
+configuration {
+  show-icons: true;
+}

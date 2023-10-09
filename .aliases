@@ -65,9 +65,6 @@ alias gg='git log --all --decorate --oneline --graph'
 
 alias gm='git merge'
 
-# fzf
-alias sd='cd $(find * -type d 2>/dev/null | fzf)'
-
 # Lazygit
 alias lg='lazygit'
 
