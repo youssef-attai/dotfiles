@@ -15,6 +15,7 @@ programs=(
     ["sxhkd"]="$HOME/.config/sxhkd/sxhkdrc"
     ["xinit"]="$HOME/.xinitrc"
     ["bin"]="$HOME/bin/"
+    ["zsh"]="$HOME/.zsh/"
 )
 
 # Get the list of programs.
