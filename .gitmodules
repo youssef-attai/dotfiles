@@ -1,3 +1,0 @@
-[submodule ".config/nvim"]
-	path = /home/attai/.config/nvim
-	url = https://github.com/youssef-attai/nvim/
