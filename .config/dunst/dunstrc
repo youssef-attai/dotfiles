@@ -1,0 +1,27 @@
+[global]
+font = "FiraCode Nerd Font 11"
+frame_color = "#cba6f7"
+background = "#141424"
+foreground = "#A6ADC8"
+separator_color = "#A6ADC855"
+origin = top-center
+corner_radius = 8
+progress_bar_corner_radius = 8
+progress_bar_frame_width = 0
+progress_bar_height = 4
+highlight = "#cba6f7"
+frame_width = 2
+
+[urgency_low]
+
+[urgency_normal]
+
+[urgency_critical]
+
+[play_normal_notification_sound]
+msg_urgency = "normal"
+script = "/home/attai/bin/play_normal_notification_sound"
+
+[play_critical_notification_sound]
+msg_urgency = "critical"
+script = "/home/attai/bin/play_critical_notification_sound"
