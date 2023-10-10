@@ -6,6 +6,14 @@
 !.zsh/.zprofile
 !.config/
 .config/*
+!.local/
+.local/*
+!.local/share/
+.local/share/*
+!.local/share/rofi/
+.local/share/rofi/*
+!.local/share/rofi/themes/
+!.local/share/rofi/themes/spotlight-dark.rasi
 
 git/
 aur/
