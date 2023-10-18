@@ -19,5 +19,3 @@ bspc config presel_feedback_color "#6272a4"
 
 # follow mouse
 bspc config focus_follows_pointer true
-
-bspc rule -a system_monitor_scratchpad sticky=on state=floating rectangle=1000x600+183+84

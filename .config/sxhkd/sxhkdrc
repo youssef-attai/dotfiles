@@ -206,10 +206,6 @@ ctrl + super + Print
 super + n
   networkmanager_dmenu
 
-# System monitor
-super + s
-  system_monitor
-
 # Show date and time
 super + t
   datetime
